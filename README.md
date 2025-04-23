@@ -5,31 +5,36 @@ support multi-model comparison, automatic feature screening, model parameter
 adjustment and evaluation, and integrate commonly used models with automatic saving mechanisms.
 
 ###### PROJECT STRUCTURE ######
+```text
+PROJECT STRUCTURE
 .
 ├── data/                    # store raw data
-        ├── TestSet.csv   
-        ├── TrainfSet.csv   
-├── utils/                     
-        ├── config.py        # gobal variables
-        ├── path_helper.py   # path management
-├── PreAnalysis/               
-        ├── Preprocess.py    # sight processing data and visualization before features_project 
-├── pipeline/                
-        ├── pipeline.py      # wash data
-├── train_model/             
-        ├── train.py         # train model
-├── features_project/        # use logining-definition to login features and
-        ├── features_meatures.py 
-        ├── features.py 
-├── evaluate_model/          # evaluate model（regressor/classify）
-├── notebooks/               # Jupyter explore
-├── models_saved/            # auto model-saved（.pkl file）
-├── main.py                  # main-enter
-└── README.md                # project instructions
+│   ├── TestSet.csv
+│   └── TrainfSet.csv
+├── utils/                  
+│   ├── config.py            # global variables
+│   └── path_helper.py       # path management
+├── PreAnalysis/
+│   └── Preprocess.py        # process and visualize before feature selection
+├── pipeline/
+│   └── pipeline.py          # data cleaning
+├── train_model/
+│   └── train.py             # train and save model
+├── features_project/
+│   ├── features_meatures.py
+│   └── features.py          # define features
+├── evaluate_model/         # evaluation scripts
+├── notebooks/              # Jupyter notebooks
+├── models_saved/           # auto-saved models
+├── main.py                 # entry point
+└── README.md               # project instructions
+```
 
 
 ###### INSTALLMEMT --- Environment ######
 1.Clone the Repository
+  git clone https://github.com/St-alpha-hunter/Classify_Churn_Costmer
+  cd Classify_Churn_Costmer
 
 2.Create Virtual Environment (Recommended)
   #Using venv
